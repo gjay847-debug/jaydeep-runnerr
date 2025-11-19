@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Jaydeep Runner</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui-top">
+  <div id="title">Jaydeep Runner</div>
+  <div id="coins-ui">Coins: <span id="coinCount">0</span></div>
+  </div>
+  <div id="game-wrap">
+  <canvas id="game" width="360" height="640"></canvas>
+  <div id="overlay" class="hidden">
+    <div id="menu">
+      <h2 id="menu-title">Jaydeep Runner</h2>
+      <div id="menu-buttons">
+        <button id="btn-play">Play</button>
+        <button id="btn-shop">Shop</button>
+        <button id="btn-sound">Sound: On</button>
+      </div>
+      <div id="ad-placeholder">-- Ad Placeholder (use AdMob in native app) --</div>
+    </div>
+    <div id="pause-screen" class="hidden">
+      <h3>Paused</h3>
+      <button id="btn-resume">Resume</button>
+      <button id="btn-restart">Restart</button>
+    </div>
+    <div id="shop-screen" class="hidden">
+      <h3>Shop</h3>
+      <div id="shop-items"></div>
+      <button id="btn-back-shop">Back</button>
+    </div>
+    <div id="game-over" class="hidden">
+      <h3>Game Over</h3>
+      <p>Score: <span id="finalScore">0</span></p>
+      <p>Coins earned: <span id="finalCoins">0</span></p>
+      <button id="btn-retry">Retry</button>
+      <button id="btn-menu">Main Menu</button>
+    </div>
+  </div>
+  </div>
+  <div id="footer">High Score: <span id="highScore">0</span> | Level: <span id="level">1</span></div>
+
+<script src="script.js"></script>
+</body>
+</html>
