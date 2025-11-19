@@ -1,14 +1,13 @@
 {
-  "background_color": "#1681de",
-  "dir": "auto",
-  "display": "standalone",
   "name": "Jaydeep Runner",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "Runner",
-  "start_url": "https://gjay847-debug.github.io/jaydeep-runnerr/",
-  "theme_color": "#000000",
   "id": "jaydeep-runner",
-  "description": "A simple running game by Jaydeep Games. Collect coins, avoid obstacles and level up!",
+  "description": "A simple running game by Jaydeep Games.",
+  "start_url": "https://gjay847-debug.github.io/jaydeep-runnerr/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1681de",
+  "theme_color": "#000000",
   "lang": "en"
 }
