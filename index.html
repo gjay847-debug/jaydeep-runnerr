@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jaydeep Runner</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
 
-    <!-- Manifest -->
-    <link rel="manifest" href="manifest.json">
+    <!-- Icons -->
+    <link rel="icon" href="icon-192.png" />
+    <link rel="apple-touch-icon" href="icon-512.png" />
 
+    <!-- PWA Colors -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Service Worker Register -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("./sw.js")
+                    .then(() => console.log("SW Registered"))
+                    .catch((e) => console.log("SW Failed", e));
+            });
+        }
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
     <div id="ui-top">
         <div id="title">Jaydeep Runner</div>
-        <div id="coins-ui">Coins: <span id="coinCount">0</span></div>
+        <div id="coins-ui">Coins: <span id="coins">0</span></div>
     </div>
 
     <div id="game-wrap">
@@ -29,10 +48,3 @@
                     <button id="btn-play">Play</button>
                     <button id="btn-shop">Shop</button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
